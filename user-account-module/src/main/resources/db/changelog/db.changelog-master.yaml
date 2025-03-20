@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - logicalFilePath: path-independent
+  - include:
+      file: release-0/db.changelog-0.yml
+      relativeToChangelogFile: true

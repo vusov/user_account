@@ -1,0 +1,26 @@
+databaseChangeLog:
+  - logicalFilePath: path-independent
+  - changeSet:
+      id: account-create-table
+      author: usov-vs
+      changes:
+        - createTable:
+            tableName: ACCOUNT
+            columns:
+              - column:
+                  name: ID
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    unique: true
+              - column:
+                  name: USER_ID
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    unique: true
+                    foreignKeyName: FK_ACCOUNT_USER_ID
+                    referencedTableName: USER(ID)
+              - column:
+                  name: BALANCE
+                  type: decimal

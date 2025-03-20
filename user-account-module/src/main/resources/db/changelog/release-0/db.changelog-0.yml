@@ -1,0 +1,17 @@
+databaseChangeLog:
+  - logicalFilePath: path-independent
+  - include:
+      file: schema.yml
+      relativeToChangelogFile: true
+  - include:
+      file: user.yml
+      relativeToChangelogFile: true
+  - include:
+      file: account.yml
+      relativeToChangelogFile: true
+  - include:
+      file: email.yml
+      relativeToChangelogFile: true
+  - include:
+      file: phone.yml
+      relativeToChangelogFile: true

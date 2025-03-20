@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - logicalFilePath: path-independent
+  - changeSet:
+      id: email-create-table
+      author: usov-vs
+      changes:
+        - createTable:
+            tableName: EMAIL_DATA
+            columns:
+              - column:
+                  name: ID
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    unique: true
+              - column:
+                  name: USER_ID
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    foreignKeyName: FK_EMAIL_USER_ID
+                    referencedTableName: USER(ID)
+              - column:
+                  name: EMAIL
+                  type: varchar(200)
+                  constraints:
+                    unique: true

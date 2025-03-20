@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - logicalFilePath: path-independent
+  - changeSet:
+      id: create-schema
+      author: usov-vs
+      changes:
+        - sql:
+            sql: CREATE SCHEMA IF NOT EXISTS user_account

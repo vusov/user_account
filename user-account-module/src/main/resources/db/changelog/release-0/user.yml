@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - logicalFilePath: path-independent
+  - changeSet:
+      id: user-create-table
+      author: usov-vs
+      changes:
+        - createTable:
+            tableName: USER
+            columns:
+              - column:
+                  name: ID
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    unique: true
+              - column:
+                  name: NAME
+                  type: varchar(500)
+              - column:
+                  name: DATE_OF_BIRTH
+                  type: date
+              - column:
+                  name: PASSWORD
+                  type: varchar(500)

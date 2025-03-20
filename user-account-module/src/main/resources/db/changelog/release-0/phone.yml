@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - logicalFilePath: path-independent
+  - changeSet:
+      id: phone-create-table
+      author: usov-vs
+      changes:
+        - createTable:
+            tableName: PHONE_DATA
+            columns:
+              - column:
+                  name: ID
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    unique: true
+              - column:
+                  name: USER_ID
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    foreignKeyName: FK_PHONE_USER_ID
+                    referencedTableName: USER(ID)
+              - column:
+                  name: PHONE
+                  type: varchar(13)
+                  constraints:
+                    unique: true
