@@ -15,3 +15,6 @@ databaseChangeLog:
   - include:
       file: phone.yml
       relativeToChangelogFile: true
+  - include:
+      file: add_user.yml
+      relativeToChangelogFile: true

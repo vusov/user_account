@@ -1,0 +1,51 @@
+databaseChangeLog:
+  - logicalFilePath: path-independent
+  - changeSet:
+      id: user-insert
+      author: usov-vs
+      changes:
+        - insert:
+            tableName: USER
+            columns:
+              - column:
+                  name: ID
+                  value: 0
+              - column:
+                  name: NAME
+                  value: Иван
+              - column:
+                  name: DATE_OF_BIRTH
+                  value: 2000-01-01
+              - column:
+                  name: PASSWORD
+                  type: 123
+        - insert:
+            tableName: USER
+            columns:
+              - column:
+                  name: ID
+                  value: 1
+              - column:
+                  name: NAME
+                  value: Петр
+              - column:
+                  name: DATE_OF_BIRTH
+                  value: 2000-01-02
+              - column:
+                  name: PASSWORD
+                  type: 123
+        - insert:
+            tableName: USER
+            columns:
+              - column:
+                  name: ID
+                  value: 2
+              - column:
+                  name: NAME
+                  value: Кузьма
+              - column:
+                  name: DATE_OF_BIRTH
+                  value: 2000-01-03
+              - column:
+                  name: PASSWORD
+                  type: 123

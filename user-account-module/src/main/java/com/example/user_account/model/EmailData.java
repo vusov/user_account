@@ -8,7 +8,7 @@ import java.math.BigInteger;
 
 @Entity
 @Data
-@Table(name="email_data")
+@Table(name="email_data", schema = "user_account")
 public class EmailData {
 
     @Id

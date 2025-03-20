@@ -1,5 +1,6 @@
 package com.example.user_account.model;
 
+import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -7,7 +8,8 @@ import java.math.BigInteger;
 
 @Entity
 @Data
-@Table(name="phone_data")
+@Table(name="phone_data", schema = "user_account")
+@Builder
 public class PhoneData {
 
     @Id

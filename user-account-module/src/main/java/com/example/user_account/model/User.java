@@ -1,7 +1,6 @@
 package com.example.user_account.model;
 
 import lombok.Data;
-import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.math.BigInteger;
@@ -9,7 +8,7 @@ import java.time.LocalDate;
 
 @Entity
 @Data
-@Table(name="user")
+@Table(name="\"USER\"", schema = "user_account")
 public class User {
 
     @Id
