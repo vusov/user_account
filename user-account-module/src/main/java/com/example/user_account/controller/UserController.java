@@ -2,6 +2,7 @@ package com.example.user_account.controller;
 
 import com.example.user_account.model.User;
 import com.example.user_account.service.UserService;
+import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -15,7 +16,7 @@ import java.time.LocalDate;
 
 @RestController
 @RequiredArgsConstructor
-public class Controller {
+public class UserController {
     private final UserService userService;
 
     @GetMapping("/users")
@@ -27,5 +28,11 @@ public class Controller {
                                       Pageable pageable) {
         Page<User> users = userService.findUsers(dateOfBirth, phone, name, email, pageable);
         return ResponseEntity.ok(users);
+    }
+
+    @GetMapping
+    @Operation(summary = "Доступен только авторизованным пользователям")
+    public String example() {
+        return "Hello, world!";
     }
 }
