@@ -68,4 +68,8 @@ public class UserService {
         return getByUsername(username);
     }
 
+    public User getUserOnEmail(String email) {
+        return userRepository.findOnEmail(email).orElseThrow(() -> new UsernameNotFoundException("Пользователь не найден"));
+    }
+
 }

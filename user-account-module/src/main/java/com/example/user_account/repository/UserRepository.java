@@ -24,6 +24,5 @@ public interface UserRepository extends JpaRepository<User, BigInteger>, JpaSpec
     @Query(value = "select distinct u from User u" +
             " left join EmailData e on u = e.user" +
             " where e.email = ?1")
-    boolean existsByEmail(String email);
-
+    Optional<User> findOnEmail(String email);
 }
